@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --light-clr: #f0ece6;
-    --dark-grey: #303030;
+    --light-clr: #f5f2ef;
+    --grey: #838383;
     --main-font-clr: #2e2e2e;
     --blue: #203349;
     --light-blue: #0d80ad;
@@ -15,8 +17,8 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
     line-height: 1.6em;
     background-color: var(--light-clr);
     color: var(--main-font-clr);
@@ -28,7 +30,7 @@ h1 {
     font-size: 2.5rem;
     line-height: 4rem;
     margin-bottom: 50px;
-    font-weight: 500;
+    font-weight: 400;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
 }
 
@@ -40,22 +42,14 @@ h2 {
 
 .heading strong {
     font-size: 3.5rem;
-    width: 100%;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .main-content strong {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     color: var(--light-blue);
     margin-left: 20px;
-}
-
-.heading p {
-    text-shadow: 2px 2px 3px #000000;
-    font-size: 22px;
-    line-height: 1.6em;
-    max-width: 600px;
 }
 
 hr {
@@ -66,30 +60,64 @@ hr {
     margin-bottom: 20px;
 }
 
+@media only screen and (min-width: 600px) {
+    h1 {
+        font-size: 4rem;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
+        line-height: 6rem;
+    }
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .heading strong {
+        font-size: 6rem;
+        letter-spacing: -2px;
+    }
+}
+
 /*---------NAV---------*/
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 0.8rem;
+    background-color: var(--light-clr);
+    padding: 0.8rem 5%;
     width: 100vw;
 }
 
-nav a {
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#main-logo {
     width: 120px;
     transition: transform .2s;
     height: 35px;
+    margin: 0;
 }
 
-nav a:hover {
-    transform: scale(1.1);
+#kontakt-oss {
+    text-decoration: none;
+    color: var(--main-font-clr);
+    font-weight: 500;
+    margin: 0;
 }
+
+#kontakt-oss:hover {
+    transform: scale(1.1);
+    color: var(--light-blue);
+}
+
+#kontakt-oss:active {
+    color: var(--light-blue);
+}
+
 
 /*---------HEADER---------*/
 
-header {
+.index-header {
     background:  linear-gradient(to bottom, rgba(8, 12, 31, 0.596), rgba(0, 0, 0, 0)), url(../img/tromso.jpg) var(--blue);
     background-attachment: fixed;
     background-position: center;
@@ -97,7 +125,7 @@ header {
     background-size: cover;
     min-height: 600px;
     text-align: center;
-    color: var(--light-clr);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,67 +133,68 @@ header {
 
 .heading {
     padding: 70px 30px;
-}
-
-/*---------LIST---------*/
-
-.ul-wrapper {
-    box-sizing: border-box;
-    background-color: var(--blue);
-    color: var(--light-clr);
-    font-weight: 600;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-ul {
-    box-sizing: border-box;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.ul-wrapper p {
-    margin-bottom: 30px;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    max-width: 600px;
-}
-
-ul li {
-    display: inline-block;
-    font-size: 22px;
-    padding: 20px 30px;
+    max-width: 800px;
 }
 
 /*---------MAIN---------*/
 
 main {
-    padding: 70px 20px;
-    /* background: url(../img/tromso.jpg) var(--blue);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: var(--blue);
+    padding: 40px 20px;
+    background-color: var(--light-clr);
     text-align: center;
-
 }
+
+/*---------DATOER---------*/
+.main-dato {
+    color: var(--light-clr);
+    text-align: center;
+    color: var(--main-font-clr);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    }
+}
+
+.main-dato p {
+    max-width: 450px;
+}
+
+.main-dato ul {
+    margin-top: 30px;
+    font-weight: 600;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul li {
+    display: inline-block;
+    font-size: 18px;
+    padding: 10px 10px;
+}
+
+@media only screen and (min-width: 600px) {
+    .main-1 ul {
+        flex-direction: row;
+    }
+}
+
+/*---------PRISER---------*/
 
 .main-content-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 900px;
+    max-width: 800px;
 }
 
 .main-content {
     background-color: #ffffff;
     padding: 40px 30px;
-    width: 400px;
+    width: 300px;
     border-radius: 10px;
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.041);
 }
 
 .main-content p {
@@ -174,55 +203,121 @@ main {
 
 .main-tillegg {
     margin-top: 20px;
-    color: var(--light-clr)
 
 }
 
-/*---------backgr-img---------*/
+/*---------BUTTON---------*/
 
-.backgr-img {
-    box-sizing: border-box;
-    background: url(../img/tromso.jpg) var(--blue);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 200px;
+.main-tillegg a {
+    text-decoration: none;
+}
+
+.main-tillegg button {
+    background-color: var(--light-blue);
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.main-tillegg button:hover {
+    background-color: #0e9fd8;;
 }
 
 /*---------FOOTER---------*/
 
 footer {
-    background-color: var(--dark-grey);
-    text-align: center;
+    margin-top: 50px;
+    background-color: var(--blue);
     padding: 60px 20px;
-    color: var(--light-clr);
-    font-size: 18px;
     line-height: 1.8em;
     letter-spacing: 0.5px;
 }
 
-footer img {
-    width: 120px;
-    margin-top: 50px;
+.footer-items {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-@media only screen and (min-width: 600px) {
-    h1 {
-        font-size: 4rem;
-        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
+.footer-img {
+    width: 120px;
+    margin-bottom: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--light-clr);
+    color: var(--light-clr);
+}
+
+/*---------KONTAKTSIDE----------------------------
+--------------------------------------------------
+--------------------------------------------------*/
+
+#tilbake {
+
+}
+
+.kontakt-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:  linear-gradient(to bottom, rgba(8, 12, 31, 0.596), rgba(0, 0, 0, 0)), url(../pages/img/bilde-av-alle.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    color: white;
+}
+
+.kontakt-container {
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+@media only screen and (min-width: 800px) {
+    .kontakt-card {
+        grid-template-columns: 1fr 1fr;
     }
-    h2 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    } 
-    .heading {
-        width: 90%;
-        padding: 0px 20px;
-        line-height: 1.6em;
-    }
-    .main-content {
-        /* width: 80%;
-        text-align: center; */
-    }
+}
+
+.kontakt-card {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+    max-width: 350px;
+}
+
+
+.kontakt-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.kontakt-info p {
+    font-weight: ;
+}
+
+.kontakt-info a {
+    text-decoration: none;
+    color: var(--main-font-clr);
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-style: italic;
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 12px;
 }
