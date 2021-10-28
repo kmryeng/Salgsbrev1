@@ -4,12 +4,14 @@
     --light-clr: #f0ece6;
     --dark-grey: #303030;
     --main-font-clr: #2e2e2e;
-    --blue: #293646;
+    --blue: #203349;
+    --light-blue: #0d80ad;
 }
 
 * {
     margin: 0 auto;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -23,22 +25,30 @@ body {
 /*---------TYPOGRAPHY---------*/
 
 h1 {
-    font-size: 4em;
-    line-height: 1.3em;
+    font-size: 2.5rem;
+    line-height: 4rem;
     margin-bottom: 50px;
-    text-shadow: 4px 6px 6px #000;
+    font-weight: 500;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.5rem;
     line-height: 1.3em;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
-strong {
-    font-size: 20px;
+.heading strong {
+    font-size: 3.5rem;
+    width: 100%;
     font-weight: 800;
-    color: var(--blue);
+}
+
+.main-content strong {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--light-blue);
+    margin-left: 20px;
 }
 
 .heading p {
@@ -48,48 +58,53 @@ strong {
     max-width: 600px;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background: rgb(107, 107, 107);
+    background-image: linear-gradient(to right, #ccc, rgb(146, 146, 146), #ccc);
+    margin-bottom: 20px;
+}
+
 /*---------NAV---------*/
 
 nav {
-    box-sizing: border-box;
-    background-color: #fff;
-    height: 60px;
-    width: 100%;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
+    padding: 0.8rem;
+    width: 100vw;
 }
 
-nav img {
-    width: 150px;
+nav a {
+    width: 120px;
     transition: transform .2s;
+    height: 35px;
 }
 
-nav img:hover {
+nav a:hover {
     transform: scale(1.1);
 }
 
 /*---------HEADER---------*/
 
 header {
-    box-sizing: border-box;
-    background: url(../img/luca-bravo-SgtU7sK6oP4-unsplash.jpg) var(--blue);
+    background:  linear-gradient(to bottom, rgba(8, 12, 31, 0.596), rgba(0, 0, 0, 0)), url(../img/tromso.jpg) var(--blue);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vh;
+    min-height: 600px;
     text-align: center;
     color: var(--light-clr);
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.header {
-    width: 70%;
+.heading {
+    padding: 70px 30px;
 }
 
 /*---------LIST---------*/
@@ -99,8 +114,8 @@ header {
     background-color: var(--blue);
     color: var(--light-clr);
     font-weight: 600;
-    padding: 50px 0px;
-
+    padding: 50px 20px;
+    text-align: center;
 }
 
 ul {
@@ -109,8 +124,14 @@ ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
 
-    max-width: 60%;
+.ul-wrapper p {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    max-width: 600px;
 }
 
 ul li {
@@ -122,22 +143,39 @@ ul li {
 /*---------MAIN---------*/
 
 main {
-    max-width: 980px;
-    padding: 100px 0px;
+    padding: 70px 20px;
+    /* background: url(../img/tromso.jpg) var(--blue);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: var(--blue);
+    text-align: center;
+
 }
 
 .main-content-container {
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
 }
 
 .main-content {
-    margin-bottom: 50px;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    width: 400px;
+    border-radius: 10px;
 }
 
 .main-content p {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.main-tillegg {
+    margin-top: 20px;
+    color: var(--light-clr)
+
 }
 
 /*---------backgr-img---------*/
@@ -149,16 +187,15 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 200px;
 }
 
 /*---------FOOTER---------*/
 
 footer {
-    box-sizing: border-box;
     background-color: var(--dark-grey);
     text-align: center;
-    padding: 60px;
+    padding: 60px 20px;
     color: var(--light-clr);
     font-size: 18px;
     line-height: 1.8em;
@@ -166,27 +203,26 @@ footer {
 }
 
 footer img {
-    width: 150px;
+    width: 120px;
     margin-top: 50px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
     h1 {
-        font-size: 2.5em;
-        text-shadow: 3px 3px 3px #000;
+        font-size: 4rem;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
     }
     h2 {
         font-size: 1.5em;
         margin-bottom: 20px;
     } 
     .heading {
-        box-sizing: border-box;
         width: 90%;
         padding: 0px 20px;
         line-height: 1.6em;
     }
     .main-content {
-        width: 80%;
-        text-align: center;
+        /* width: 80%;
+        text-align: center; */
     }
 }
