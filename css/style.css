@@ -8,6 +8,7 @@
     --main-font-clr: #2e2e2e;
     --blue: #203349;
     --light-blue: #18c9ff;
+    --dark-blue: #0079be;
 }
 
 * {
@@ -35,7 +36,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.3em;
     margin-bottom: 20px;
 }
@@ -46,10 +47,16 @@ h2 {
     color: var(--light-blue);
 }
 
+h3 {
+    font-size: 1.2rem;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+}
+
 .main-content strong {
     font-size: 20px;
     font-weight: 800;
-    color: var(--light-blue);
+    color: var(--dark-blue);
     margin-left: 20px;
 }
 
@@ -61,7 +68,7 @@ hr {
     margin-bottom: 20px;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
     h1 {
         font-size: 4rem;
         text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.26);
@@ -74,6 +81,9 @@ hr {
     .heading strong {
         font-size: 6rem;
         letter-spacing: -2px;
+    }
+    li {
+        font-size: 3rem;
     }
 }
 
@@ -132,8 +142,6 @@ nav {
     justify-content: center;
 }
 
-
-
 .heading {
     padding: 70px 30px;
     max-width: 800px;
@@ -142,7 +150,7 @@ nav {
 /*---------MAIN---------*/
 
 main {
-    padding: 40px 20px;
+    padding: 60px 20px;
     background-color: var(--light-clr);
     text-align: center;
 }
@@ -155,7 +163,7 @@ main {
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 2rem;
-    }
+    padding-bottom: 4rem;
 }
 
 .main-dato p {
@@ -177,22 +185,29 @@ ul li {
     padding: 10px 10px;
 }
 
+.small-p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
 @media only screen and (min-width: 600px) {
     .main-1 ul {
         flex-direction: row;
     }
 }
 
-/*---------PRISER---------*/
+/*PRISER*/
 
 .main-content-container {
+    max-width: 800px;
+}
+.main-content {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 800px;
 }
 
-.main-content {
+.main-content-card {
     background-color: #ffffff;
     padding: 40px 30px;
     width: 300px;
