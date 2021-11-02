@@ -295,6 +295,7 @@ h5 {
 #kontakt-header h2 {
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 @media only screen and (min-width: 850px) {
